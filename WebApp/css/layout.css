@@ -1,0 +1,226 @@
+/*----------------- Layout ------------------*/
+
+body {
+	background: #ded8c5;
+	color:#191919 ;
+	font: 100%/1.0 "Century Gothic", Helvetica,Arial,sans-serif;
+}
+header, nav, section, footer {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+}
+#tE-header-content{
+	left: 179px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    width: 900px;
+}
+#tE-content-bg {
+    background: #DED8C5;
+    position: relative;
+}
+#tE-content-bg.tE-content-bgUp{
+	z-index: 2000;
+}
+#tE-main-content{
+	width:870px;
+	padding:15px;
+	margin:0 auto;
+	overflow: hidden;
+}
+#tE-main-content.tE-cart-content{
+	position: relative;
+    top: -60px;
+}
+.tE-box-content{
+	border-bottom: 1px solid #7B7B7B;
+    overflow: hidden;
+    padding-bottom: 35px;
+	text-align: center;
+}
+.tE-box{
+	float:left;
+	width:270px;
+	overflow: hidden;
+}
+.tE-box-left{
+	margin-right: 20px;
+    width: 580px;
+}
+.tE-right-boxes-container{
+	position: absolute;
+	*position: relative;
+    top: -40px;
+	*top: -60px;
+	width: 270px;
+    z-index: 3000;
+}
+.tE-white-box{
+	background: url("../img/white-box-bg.png") repeat scroll 0 0 transparent;
+    padding: 10px;
+	/*margin-bottom: 20px;*/
+	height: auto;
+	overflow: hidden;
+}
+.tE-black-box{
+	background: none repeat scroll 0 0 #191919;
+    padding: 20px;
+	text-align:left;
+	overflow: hidden;
+}
+.middle.tE-box .dotted{
+	border-bottom: 1px dotted;
+    height: 10px;
+    margin-bottom: 15px;
+}
+.middle.tE-box{
+	margin: 0 25px;
+}
+.tE-footer-content{
+	border-bottom: none;
+	padding-top: 40px;
+}
+.tE-footer-content input[type="text"]{
+	background:transparent;
+	width:95%;
+}
+.tE-white-box-bg-footer{
+	background: url("../img/white-box-bg-footer.png") repeat-x scroll 0 0 transparent;
+	height: 17px;
+	margin-bottom: 20px;
+}
+/*----------------- HEADER -----------------*/
+
+header {
+	background: #abc94b;
+	height: 115px;
+	z-index:9000;
+}
+#tE-header-logo{
+	float: left;
+    position: relative;
+    top: 3px;
+	z-index: 9000;
+	zoom:-1;
+}
+#tE-header-nav{
+	float: right;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: auto;
+}
+#tE-header-nav li{
+	float: left;
+	margin-left: 20px;
+}
+#tE-header-nav a{
+	color: #FFFFFF;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+#tE-header-nav a:hover{
+	color:#191919;
+}
+.tE-carrito-nav{
+	position: relative;
+    top: -5px;
+}
+.tE-carrito-nav img{
+	bottom: -5px;
+    position: relative;
+}
+#tE-header-login{
+	float: right;
+	margin-top: 20px;
+	width: 190px;
+}
+#tE-header-login ul{
+	margin-top: 5px;
+    overflow: hidden;
+    text-align: left;
+    width: 160px;
+}
+#tE-header-login li{
+	float:left;
+	margin-left: 5px;
+}
+#tE-header-login a{
+	color:#fff;
+	font-family:arial;
+	font-size:11px;
+    font-weight: regular;
+	text-decoration:underline;
+}
+#tE-header-login img{
+	/*float: right;
+    position: relative;
+    top: 0;*/
+}
+#tE-header-user{
+	color: #2E3C00;
+    float: left;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    right: 10px;
+    text-align: right;
+    width: 80%;
+}
+#tE-header-userPic{
+	float:right;
+}
+
+/*----------------- BANNER -----------------*/
+
+#tE-banner{
+	overflow-x: hidden;
+    position: relative;
+	top: -1px;
+	z-index:1000;
+	height: 215px;
+}
+#tE-banner img{
+	left: -12.55%;
+    position: relative;
+}
+#tE-banner ul{
+	width: 10000px;
+}
+#tE-banner li{
+	float: left;
+}
+#tE-banner-control {
+    bottom: 30px;
+    overflow: hidden;
+    position: relative;
+	margin: 0 auto;
+	text-align: center;
+    width: 100px;
+	*z-index:9000;
+}
+#tE-banner-control a {
+    background: url("../img/control.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    float: left;
+    height: 20px;
+    margin: 0 4px;
+    text-indent: -9999px;
+    width: 15px;
+	cursor: pointer;
+}
+#tE-banner-control a.current{
+	background: url("../img/controlCurrent.png") no-repeat scroll -2px 1px transparent;
+}
+.tE-button-quiero{
+	background: url("../img/bt-quiero.png") no-repeat scroll 0 0 transparent;
+	bottom: 90px;
+	left: 275px;
+	position: absolute;
+	*z-index:9000;
+}	

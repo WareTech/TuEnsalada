@@ -1,0 +1,18 @@
+<%@page import="ar.com.WareTech.TuEnsalada.middleware.services.WebUtils"%>
+<%@page import="java.util.Iterator"%>
+<table id="errors" style="width: 100%; color: red; font-weight: bold;">
+<%
+Iterator errorIterator = WebUtils.getErrorList(request).iterator();
+String error;
+while (errorIterator.hasNext())
+{
+	error = (String) errorIterator.next();
+%>
+	<tr>
+		<td><%= error %></td>
+	</tr>
+<%
+}
+WebUtils.getErrorList(request).clear();
+%>
+</table>

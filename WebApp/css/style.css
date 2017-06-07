@@ -1,0 +1,38 @@
+#errorList {
+	background-color: red;
+}
+
+#messageList {
+	background-color: #32CD32;
+}
+
+#products {
+	width: 50%;
+	//height: 550px;
+	float: left;
+}
+
+#menu {
+	height: 550px;
+}
+
+#products table thead tr {
+	font-weight: bold;
+}
+
+#cart {
+	width: 50%;
+	float: right;
+}
+
+#cart table thead tr {
+	font-weight: bold;
+}
+
+#count {
+	width: 25px;
+}
+
+#price {
+	width: 40px;
+}

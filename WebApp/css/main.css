@@ -1,0 +1,443 @@
+/* Font Face */
+
+@font-face {
+	font-family: "Gothic Bold";
+	src:local(Gothic Bold),
+	url("../fonts/gothicb.ttf");   /* TTF file for CSS3 browsers */
+	url("../fonts/gothicb.eot"); /* EOT file for IE */
+	url("../fonts/gothicb.woff") format("woff");
+}
+@font-face {
+	font-family: "Cheappine Sans";
+	src:local(Cheappine Sans),
+	url("../fonts/Cheap Pine/cheappine-sans.otf");  
+	url("../fonts/Cheap Pine/cheappine-sans.eot");
+	url("../fonts/Cheap Pine/cheappine-sans.woff") format("woff");
+}
+
+/* END Font Face */
+
+
+/*-------------- Text Formatting ---------------*/
+
+h1 {
+	font-size:1.6em;
+	color:#191919;
+	margin: 0;
+}
+h2 {
+	color: #abc94b;
+    font-size: 1.5em;
+    margin: 0;
+}
+h3 {
+	font-size:1.3em;
+	color:#FFFFFF;
+	margin: 0;
+}
+h4 {
+	font-size:1.1em;
+	color:#191919;
+	margin: 0;
+}
+h5 {
+	color: #191919;
+    font-size: 0.95em;
+	margin: 0;
+}
+p {
+	color: #191919;
+    font-family: Arial;
+    font-size: 0.75em;
+    line-height: 1.6em;
+	margin: 0;
+}
+a, a:active, a:visited {
+	text-decoration: none;
+}
+
+/*-------------- Form ---------------*/
+
+input[type=text],
+input[type=search],
+input[type=password],
+input[type=select]{
+	background: #fff;
+    border: 1px solid #7B7B7B;
+    color: #8D8B8B;
+    font-size: 0.9em;
+    height: 30px;
+    padding: 2px 5px;
+	width:100%;
+}
+
+textarea{
+	background:transparent;
+	border: 2px solid #e7e7e7;
+	border-radius: 2px;
+    color: #8d8b8b;
+    padding: 2px;
+	font-size: 0.9em;
+}
+input[type=checkbox]{
+
+}
+
+/*-------------- Buttons -------------------*/
+
+.tE-button{
+    height: 40px;
+    padding-left: 40px;
+    width: 120px;
+}
+.tE-button-previous{
+	background: url("../img/bt-prev.png") no-repeat scroll 0 0 transparent;
+	float: left;
+}
+.tE-button-up{
+	background: url("../img/bt-up.png") no-repeat scroll 0 0 transparent;
+}
+.tE-button-next{
+	background: url("../img/bt-next.png") no-repeat scroll 0 0 transparent;
+	float: right;
+    padding-left: 10px;
+    text-align: left;
+}
+.tE-button-add{
+	background: url("../img/bt-add.png") no-repeat scroll 0 0 transparent;
+	top: -16px;
+}
+.tE-button-addNew{
+	background: url("../img/add-new-2.png") no-repeat scroll 0 0 transparent;
+	top: -16px;
+}
+.tE-button-save{
+	background: url("../img/bt-save.png") no-repeat scroll 0 0 transparent;
+}
+.tE-button-content{
+	*position:relative;
+	*top:-40px
+}
+.tE-button-content input{
+	*float:left;
+}
+.tE-button-content .tE-button-up{
+	*margin:0 19%;
+}
+
+/*-------------- Table ----------------*/
+
+.tE-table{
+	display:table;
+	width: 100%;
+	font-family: Arial;
+	margin-bottom: 30px;
+	clear:both;
+	position:relative;
+	*top:-40px;
+}
+.tE-row{
+	display:table-row;
+	*overflow:hidden;
+}
+.tE-cell{
+	border-top: 1px dotted #9b978a;
+    display: table-cell;
+	*float:left;
+    font-weight: bold;
+    padding: 15px 10px;
+}
+.tE-cellProduct{
+	text-align: left;
+    width: 63.5%;
+	*width:56%;
+	font-weight: normal;
+}
+.tE-cellPrice{
+	border-right: 1px solid #CCCCCC;
+    color: #8daf21;
+	font-size: 0.8em;
+    width: 10%;
+}
+.tE-cellCheck{
+	text-align: right;
+	color: #666666;
+	font-size: 0.8em;
+}
+.tE-cellCheck label{
+	margin-right:10px;
+	*float:left;
+	*text-align:right;
+}
+.tE-cellCheck input password{
+	*float:right;
+}
+
+/*-------------- Tabs ----------------*/
+
+.tE-tabs{
+	position: absolute;
+	*position: relative;
+    top: -43px;
+	*top: -59px;
+}
+.tE-tabs li{
+	background: url("../img/tabBg.png") no-repeat scroll 0 0 transparent;
+	float: left;
+    height: 39px;
+    margin-right: 2px;
+	*margin-right: 1px;
+    width: 95px;
+}
+.tE-tabs li.currentTab{
+	background: url("../img/tabCurrentBg.png") no-repeat scroll 0 0 transparent;
+}	
+.tE-tabs a{
+	color: #191919;
+    font-family: "Arial Narrow";
+    font-size: 1em;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+}
+
+/*-------------- Count Section ---------------*/
+.TuCuentaChanged{
+	border: solid;
+	//border-width: 3px;
+	border-color: #8DAF21;
+}
+
+.tE-right-box h2,
+.tE-white-box h2{
+	border-bottom: 2px solid #191919;
+    border-top: 2px solid #191919;
+    color: #191919;
+    display: inline-block;
+	margin: 10px 0;
+	*width: 140px;;
+}
+.tE-right-box  span,
+.tE-cell span,
+.tE-box-bottom  span,
+.tE-black-box h3{
+	font-weight:bold;
+	color:#8DAF21;
+}
+.tE-white-box input[type="text"], .tE-white-box input[type="password"]{
+	width:95%;
+	margin: 5px 0 30px;
+}
+.tE-white-box .tE-box-bottom{
+	color: #191919;
+	font-weight: bold;
+    text-align: left;
+	overflow: hidden;
+}
+.tE-white-box .tE-box-top {
+	background: url("../img/white-box-top.jpg") repeat ;
+    font-size: 0.9em;
+    margin-top: 10px;
+	*margin-bottom: 50px;
+    padding: 2px 2px 5px;
+}
+.tE-white-box #tE-count-table,
+.tE-white-box #tE-cart-table{
+	margin:10px 0;
+}
+.tE-white-box #tE-cart-table{
+	*top:0;
+}
+.tE-white-box .tE-box-bottom span{
+	font-size: 2em;
+}
+.tE-white-box .tE-cell{
+	padding: 10px;
+}
+.tE-white-box  .tE-cellProduct{
+	font-size: 0.9em;
+	width: 90%;
+	*width:79%;
+}
+#tE-cart-table .tE-cellProduct{
+	width: 40%;
+	*width:35%;
+}
+#tE-cart-table .tE-cellItem,
+#tE-cart-table .tE-cellButton{
+	font-weight: normal;
+	text-align: left;	
+	*width:13%;
+	*padding-top:19px;
+}	
+#tE-cart-table .tE-cellButton{
+	text-align: right;	
+	width: 50px;
+}
+.tE-cart-button.tE-box-bottom .tE-button-addNew {
+    float: left;
+    margin-right: 10px;
+    top: 0;
+    width: 120px;
+}
+.tE-white-box .tE-cellButton input[type="button"],
+.tE-white-box .tE-cellButton input[type="submit"]
+{
+	color:#666;
+	border-left: 1px solid #666666;
+	background:transparent;
+}
+.tE-white-box .tE-cellButton input.btEditItem {
+    background: url("../img/edit-item.png") repeat-x scroll 0 0 transparent;
+    border: medium none;
+    margin-right: 5px;
+    width: 17px;
+	height: 17px;
+}
+.tE-white-box .tE-box-bottom,
+.tE-white-box  p{
+	/**position:relative;
+	*top:-30px;*/
+}
+.tE-cart-button.tE-box-bottom p, 
+.tE-cart-button.tE-box-bottom span {
+    display: inline-block;
+    padding-left: 170px;
+}
+.tE-cart-button.tE-box-bottom p{
+	float:left;
+}
+.tE-black-box p{
+	color: #FFFFFF;
+    font-family: Century Gothic;
+    font-size: 0.95em;
+    line-height: 1.2em;
+    margin: 5px 0 15px;
+    width: 200px;
+}
+.tE-black-box input{
+	width:95%;
+	margin-bottom: 30px;
+}
+.tE-box-bottom {
+	color: #FFFFFF;
+	font-size: 0.9em;
+}
+.tE-box-bottom img{
+	float: left;
+	margin-right: 5px;
+}
+.tE-box-bottom span{
+	 float: left;
+}
+.tE-box-bottom input[type="button"],
+.tE-box-bottom input[type="submit"],
+.tE-box-bottom button{
+	float: right;
+    width: 130px;
+	margin-bottom: 0;
+}
+
+.user-register tr td
+{
+	width: 200px;
+}
+
+.user-register tr td input[type="text"], 
+.user-register tr td input[type="password"]
+{
+	overflow:auto; 
+	width:100%;
+}
+.user-register tr td input[type="submit"]
+{
+	background: url("../img/bt-save.png") no-repeat scroll 0 0 transparent;
+	height: 38px;
+	width: 145px;
+}
+.user-register tr td {
+	text-align:right; 
+	padding-right:15px; 
+}
+
+.popup{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 1000px;
+	text-align: center;
+	background: url("../img/green_bg.png") repeat;
+}
+
+.popup .message{
+	position: absolute;
+	top: 200px;
+	left: 550px;
+	width: 300px;
+	height: 150px;
+	background-color: white;
+	border: solid;
+	border-width: 5px;
+	border-color: #8DAF21;
+	overflow: auto;
+}
+
+.popup .message .header{
+	position: absolute;
+	text-align: right;
+	width: 99%;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.popup .message .content{
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	color: #8DAF21;
+	top:40px;
+	width: 90%;
+	padding-left: 15px;
+}
+
+.popup .message .content span{
+	margin-top: 2px;
+}
+
+.popup .message .content .error{
+	color: red;
+}
+
+.popup .message .content input[type="button"]{
+	background: url("../img/bt-save.png") no-repeat scroll 0 0 transparent;
+	height: 38px;
+	width: 145px;
+	margin-top: 5px;
+	margin-left: 40px;
+}
+
+.popup .message .content input[type="text"]{
+	overflow:auto; 
+	width:96%;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.popup .processingPopup{
+	position: absolute;
+	top: 200px;
+	left: 650px;
+	width: 100px;
+	height: 16px;
+	background-color: white;
+	border: solid;
+	border-width: 5px;
+	border-color: #8DAF21;
+}
+
+.popup .closedPopup{
+	position: absolute;
+	top: 200px;
+	left: 450px;
+}

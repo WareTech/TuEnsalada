@@ -1,0 +1,75 @@
+<%@page import="ar.com.WareTech.TuEnsalada.middleware.entities.Configuration"%>
+<%@page import="ar.com.WareTech.TuEnsalada.Constants"%>
+<%@page import="ar.com.WareTech.TuEnsalada.middleware.entities.Product"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="ar.com.WareTech.TuEnsalada.middleware.services.WebUtils"%>
+<%@page import="ar.com.WareTech.TuEnsalada.middleware.entities.Cart"%>
+
+<%
+Cart cart =  WebUtils.getCart(request);
+%>
+
+<table>
+	<thead>
+		<tr>
+			<td>Producto</td>
+			<td>Cantidad</td>
+			<td>Precio</td>
+		</tr>
+	</thead>
+<%
+Iterator productIterator = cart.getProducts().iterator();
+Product product = null;
+StringBuffer stringBuffer = new StringBuffer();
+Integer count = null;
+while(productIterator.hasNext())
+{
+	if (count != null)
+	{
+		stringBuffer.append(", ");
+	}
+	
+	product = (Product) productIterator.next();
+	count = cart.getProductCount(product);
+%>
+	<tbody>
+		<tr>
+			<td><%= product.getName() %></td>
+			<td><%= count %></td>
+			<td>$&nbsp;<%= Constants.NUMBER_FORMAT.format(product.getPrice()) %></td>
+		</tr>
+<%
+	stringBuffer.append(product.getName());
+	stringBuffer.append(" (");
+	stringBuffer.append(count);
+	stringBuffer.append(")");
+}
+%>
+	<thead>
+		<tr>
+			<td colspan="2">Total</td>
+			<td>$&nbsp;<%= Constants.NUMBER_FORMAT.format(cart.getTotal()) %></td>
+		</tr>
+	</thead>
+		<tr>
+			<td colspan="3">
+				<form id="paymentForm" action="https://argentina.dineromail.com/Shop/Shop_Ingreso.asp" method="post"> 
+					<input type="hidden" name="NombreItem" value="<%= stringBuffer %>"> 
+					<input type="hidden" name="TipoMoneda" value="1"> 
+					<input type="hidden" name="PrecioItem" value="<%= Constants.NUMBER_FORMAT.format(cart.getTotal()) %>"> 
+					<input type="hidden" name="E_Comercio" value="<%= Configuration.getInstance().getGroupParameter(Constants.PARAMETER_GROUP_DINEROMAIL, "E_Comercio").getValue() %>"> 
+					<input type="hidden" name="NroItem" value="CVD22"> 
+					<input type="hidden" name="image_url" value="http://www.tuensalada.com.ar/<%= Configuration.getInstance().getGroupParameter(Constants.PARAMETER_GROUP_DINEROMAIL, "image_url").getValue() %>"> 
+					<input type="hidden" name="DireccionExito" value="http://www.tuensalada.com.ar/success?order="> 
+					<input type="hidden" name="DireccionFracaso" value="http://www.tuensalada.com.ar/failure?order="> 
+					<input type="hidden" name="DireccionEnvio" value="1"> 
+					<input type="hidden" name="Mensaje" value="1"> 
+
+					<input type="button" value="Limpiar" onclick="Cart_clear()"> 
+					<input type="button" value="Pagar en Efectivo" onclick="Cart_payCash();"> 
+					<input type="image" onclick="$('#paymentForm').submit()" src="https://argentina.dineromail.com/imagenes/vender/boton/comprar-gris.gif" border="0" name="submit" alt="Pagar con Dineromail"> 
+				</form>
+			</td>
+		</tr>
+	</tbody>
+</table>
